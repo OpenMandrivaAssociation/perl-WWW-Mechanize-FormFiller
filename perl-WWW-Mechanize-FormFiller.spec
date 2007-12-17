@@ -14,7 +14,6 @@ BuildRequires:	perl(Test::MockObject)
 BuildRequires:	perl(Test::Inline)
 BuildRequires:  perl-libwww-perl
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 WWW::Mechanize::FormFiller and its submodules are useful to automate
