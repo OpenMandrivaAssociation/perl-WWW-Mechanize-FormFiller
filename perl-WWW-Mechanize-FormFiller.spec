@@ -2,8 +2,8 @@
 
 Summary:	WWW::Mechanize::FormFiller - framework to automate HTML forms
 Name:		perl-%{real_name}
-Version:	0.08
-Release:	%mkrel 4
+Version:	0.10
+Release:	%mkrel 1
 License:	GPL or Artistic
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{real_name}
