@@ -1,20 +1,22 @@
-%define real_name WWW-Mechanize-FormFiller
+%define upstream_name    WWW-Mechanize-FormFiller
+%define upstream_version 0.10
+
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
+Release:	%mkrel 1
 
 Summary:	WWW::Mechanize::FormFiller - framework to automate HTML forms
-Name:		perl-%{real_name}
-Version:	0.10
-Release:	%mkrel 1
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{real_name}
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/WWW/%{real_name}-%{version}.tar.bz2
-BuildRequires:	perl-devel
+URL:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/WWW/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildRequires:	perl(Data::Random)
 BuildRequires:	perl(Test::MockObject)
 BuildRequires:	perl(Test::Inline)
 BuildRequires:  perl-libwww-perl
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 WWW::Mechanize::FormFiller and its submodules are useful to automate
@@ -23,7 +25,7 @@ fill out HTML form field and then let loose on a HTML form. It fills
 in the fields according to the preset rules.
 
 %prep
-%setup -q -n %{real_name}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 # pod2test is gone in perl-Test-Inline
 perl -pi -e "s|pod2test|/bin/true|g" Makefile.PL
@@ -51,4 +53,3 @@ rm -rf %{buildroot}
 %{perl_vendorlib}/WWW/Mechanize/FormFiller/Value/*.pm
 %{perl_vendorlib}/WWW/Mechanize/FormFiller/Value/Random/*.pm
 %{_mandir}/*/*
-
