@@ -1,15 +1,15 @@
 %define upstream_name    WWW-Mechanize-FormFiller
-%define upstream_version 0.10
+%define upstream_version 0.11
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Release:	1
 
 Summary:	WWW::Mechanize::FormFiller - framework to automate HTML forms
 License:	GPL+ or Artistic
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/WWW/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/WWW/WWW-Mechanize-FormFiller-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl-libwww-perl
@@ -43,7 +43,6 @@ make test
 %makeinstall_std
 
 %files
-%defattr(-,root,root)
 %doc Changes README
 %dir %{perl_vendorlib}/WWW/Mechanize/FormFiller
 %dir %{perl_vendorlib}/WWW/Mechanize/FormFiller/Value
@@ -93,4 +92,5 @@ make test
 
 * Thu Jul 14 2005 Oden Eriksson <oeriksson@mandriva.com> 0.05-1mdk
 - initial Mandriva package
+
 
