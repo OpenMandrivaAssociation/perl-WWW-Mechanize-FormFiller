@@ -8,7 +8,7 @@ Release:	3
 Summary:	WWW::Mechanize::FormFiller - framework to automate HTML forms
 License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{upstream_name}
+URL:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/WWW/WWW-Mechanize-FormFiller-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
