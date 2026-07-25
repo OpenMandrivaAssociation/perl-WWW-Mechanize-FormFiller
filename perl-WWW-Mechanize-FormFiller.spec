@@ -1,15 +1,15 @@
 %define upstream_name    WWW-Mechanize-FormFiller
-%define upstream_version 0.11
+%define upstream_version 0.13
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	WWW::Mechanize::FormFiller - framework to automate HTML forms
 License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/WWW/WWW-Mechanize-FormFiller-%{upstream_version}.tar.gz
+URL:		https://metacpan.org/dist/WWW-Mechanize-FormFiller
+Source0:	https://cpan.metacpan.org/authors/id/C/CO/CORION/WWW-Mechanize-FormFiller-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
