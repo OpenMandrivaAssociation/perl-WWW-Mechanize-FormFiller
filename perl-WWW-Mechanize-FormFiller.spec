@@ -1,15 +1,13 @@
 %define upstream_name    WWW-Mechanize-FormFiller
-%define upstream_version 0.13
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	0.13
+Release:	2
 
 Summary:	WWW::Mechanize::FormFiller - framework to automate HTML forms
 License:	GPL+ or Artistic
 Group:		Development/Perl
 URL:		https://metacpan.org/dist/WWW-Mechanize-FormFiller
-Source0:	https://cpan.metacpan.org/authors/id/C/CO/CORION/WWW-Mechanize-FormFiller-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/C/CO/CORION/WWW-Mechanize-FormFiller-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -28,7 +26,7 @@ fill out HTML form field and then let loose on a HTML form. It fills
 in the fields according to the preset rules.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 # pod2test is gone in perl-Test-Inline
 perl -pi -e "s|pod2test|/bin/true|g" Makefile.PL
@@ -57,9 +55,7 @@ make test
 %changelog
 * Tue Jul 28 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 0.100.0-1mdv2010.0
 + Revision: 401916
-- rebuild using %%perl_convert_version
-
-* Fri May 01 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.10-1mdv2010.0
+- rebuild using %0.13 Fri May 01 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.10-1mdv2010.0
 + Revision: 370247
 - update to new version 0.10
 
